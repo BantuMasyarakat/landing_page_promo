@@ -1,0 +1,726 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero */
+section.hero {
+    height: 120vh;
+    width: 100%;
+    background-image: radial-gradient(59.44% 59.44% at 50% 86.44%, #329bd6 0%, #0b2faf 100%);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr 1fr 1fr 3fr;
+    padding: 0 2rem;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+section.hero .container-app {
+    width: 100%;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+}
+
+section.hero .container-app .apperance {
+    background-color: white;
+    width: 2rem;
+    aspect-ratio: 2/3;
+    transform: skewX(20deg);
+    align-self: baseline;
+}
+
+section.hero h1 {
+    font-family: "Mayeka Bold Demo", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+section.hero h1 span {
+    color: yellow;
+}
+
+section.hero p {
+    font-family: "Mayeka Light Demo", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+section.hero .click-bundle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.hero .click-bundle .claim {
+    display: block;
+    border: none;
+    background-color: yellow;
+    padding: 0.6rem 0.9rem 0.6rem 0.9rem;
+    border-radius: 2rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 0.8rem;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.418);
+    margin-bottom: 1rem;
+    margin-top: 0.6rem;
+}
+
+section.hero .click-bundle .inf {
+    display: block;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    padding: 0.6rem 1.3rem 0.6rem 1.3rem;
+    border-radius: 2rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 0.8rem;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.418);
+}
+
+section.hero img {
+    align-self: center;
+    justify-self: center;
+    width: 17rem;
+    margin-top: 2rem;
+}
+
+/* what */
+section.what {
+    display: grid;
+    height: 90vh;
+    /* background-color: tomato; */
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 5fr 5fr;
+    padding: 0 2rem;
+    /* background-image: url("img/apperance.svg");
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    background-position: right; */
+}
+
+section.what h1 {
+    font-size: 1.3rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 99;
+}
+
+section.what h1::before {
+    content: "";
+    width: 110%;
+    height: 1.2rem;
+    background-color: yellow;
+    position: absolute;
+    bottom: -5px;
+    z-index: -1;
+    left: -0.8rem;
+    border-radius: 2rem;
+}
+
+section.what .what1,
+.what2 {
+    height: 12rem;
+    background-color: #ffffff;
+    border-radius: 0.7rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.459);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.6rem 1.6rem;
+}
+
+section.what .what1 p {
+    text-align: center;
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    font-size: 0.8rem;
+}
+
+section.what .what2 p {
+    text-align: center;
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    font-size: 0.8rem;
+}
+
+/* why */
+section.why {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 5fr 5fr 5fr 5fr;
+    padding: 2rem 2rem;
+    background-color: #0b2faf;
+    gap: 1.5rem;
+}
+
+section.why h1 {
+    font-size: 1.28rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 99;
+    line-height: 2rem;
+}
+
+section.why h1::before {
+    content: "";
+    width: 110%;
+    height: 45%;
+    background-color: yellow;
+    position: absolute;
+    z-index: -1;
+    left: -0.8rem;
+    border-radius: 2rem;
+}
+
+section.why h1 span {
+    display: block;
+    z-index: 99;
+}
+
+section.why h1 span::before {
+    content: "";
+    width: 80%;
+    height: 45%;
+    background-color: yellow;
+    position: absolute;
+    z-index: -1;
+    left: 1.5rem;
+    border-radius: 2rem;
+}
+
+section.why .why1,
+section.why .why2,
+section.why .why3,
+section.why .why4 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 0.7rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 2rem 2rem;
+}
+
+section.why .why1 h2,
+section.why .why2 h2,
+section.why .why3 h2,
+section.why .why4 h2 {
+    font-size: 1rem;
+    color: white;
+    font-family: "Mayeka Bold Demo", sans-serif;
+}
+
+section.why .why1 p,
+section.why .why2 p,
+section.why .why3 p,
+section.why .why4 p {
+    font-size: 0.8rem;
+    color: white;
+    font-family: "Mayeka Light Demo", sans-serif;
+}
+
+section.why .why1::before {
+    content: "#1";
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: #0b2faf;
+    z-index: 9;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-size: 2rem;
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    color: yellow;
+}
+section.why .why2::before {
+    content: "#2";
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: #0b2faf;
+    z-index: 9;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-size: 2rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    color: yellow;
+}
+section.why .why3::before {
+    content: "#3";
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: #0b2faf;
+    z-index: 9;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-size: 2rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    color: yellow;
+}
+section.why .why4::before {
+    content: "#4";
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: #0b2faf;
+    z-index: 9;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-size: 2rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    color: yellow;
+}
+
+/* exemple */
+section.exe {
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr repeat(3, 15rem);
+    padding: 2rem 2rem;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+section.exe h1 {
+    font-size: 1.3rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 99;
+}
+
+section.exe h1::before {
+    content: "";
+    width: 110%;
+    height: 1.2rem;
+    background-color: yellow;
+    position: absolute;
+    bottom: -5px;
+    z-index: -1;
+    left: -0.8rem;
+    border-radius: 2rem;
+}
+
+section.exe .exe1,
+section.exe .exe2,
+section.exe .exe3 {
+    position: relative;
+}
+
+section.exe .exe1::after,
+section.exe .exe2::after,
+section.exe .exe3::after {
+    content: "";
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -56%);
+    /* background-color: #329bd6; */
+    background-image: url("img/poly-dash.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 99;
+}
+
+section.exe .exe1 h2,
+section.exe .exe2 h2,
+section.exe .exe3 h2 {
+    position: absolute;
+    top: 30%;
+    left: 27.5%;
+    font-size: 1rem;
+    color: white;
+    width: 7.1rem;
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    text-align: center;
+}
+
+section.exe .exe1 #arrow1,
+section.exe .exe2 #arrow2,
+section.exe .exe3 #arrow3 {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+}
+
+/* why here */
+section.why-here {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr repeat(3, 5fr);
+    padding: 2rem 2rem;
+    background-color: #0b2faf;
+    justify-content: center;
+    align-items: center;
+}
+
+section.why-here h1 {
+    font-size: 1.28rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 99;
+    line-height: 2rem;
+}
+
+section.why-here h1::before {
+    content: "";
+    width: 110%;
+    height: 45%;
+    background-color: yellow;
+    position: absolute;
+    z-index: -1;
+    left: -0.8rem;
+    border-radius: 2rem;
+}
+
+section.why-here h1 span {
+    display: block;
+    z-index: 99;
+}
+
+section.why-here h1 span::before {
+    content: "";
+    width: 50%;
+    height: 45%;
+    background-color: yellow;
+    position: absolute;
+    z-index: -1;
+    left: 3.7rem;
+    border-radius: 2rem;
+}
+
+section.why-here .why-here1,
+section.why-here .why-here2,
+section.why-here .why-here3 {
+    width: 18;
+    height: 8rem;
+    background-color: white;
+    border-radius: 0.7rem;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.692);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section.why-here .why-here1 h2,
+section.why-here .why-here2 h2,
+section.why-here .why-here3 h2 {
+    font-size: 1.1rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    text-align: center;
+}
+
+section.why-here .why-here1 {
+    background-image: url("img/elip-y.svg");
+    background-position: -3rem -3rem;
+    background-repeat: no-repeat;
+}
+
+section.why-here .why-here1::before {
+    content: "1";
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+section.why-here .why-here2 {
+    background-image: url("img/elip-b.svg");
+    background-position: -3rem -3rem;
+    background-repeat: no-repeat;
+}
+
+section.why-here .why-here2::before {
+    content: "2";
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+section.why-here .why-here3 {
+    background-image: url("img/elip-p.svg");
+    background-position: -3rem -3rem;
+    background-repeat: no-repeat;
+}
+
+section.why-here .why-here3::before {
+    content: "3";
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+/* claim body */
+section.claim {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 9fr;
+    padding: 2rem 2rem;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    align-items: baseline;
+}
+
+section.claim h1 {
+    font-size: 1.28rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 99;
+    line-height: 2rem;
+}
+
+section.claim h1::before {
+    content: "";
+    width: 110%;
+    height: 27%;
+    background-color: yellow;
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    left: -0.8rem;
+    border-radius: 2rem;
+}
+
+section.claim h1 span {
+    display: block;
+    z-index: 99;
+}
+
+section.claim h1 span::before {
+    content: "";
+    width: 85%;
+    height: 27%;
+    background-color: yellow;
+    position: absolute;
+    z-index: -1;
+    top: 3rem;
+    left: 1rem;
+    border-radius: 2rem;
+}
+
+section.claim form {
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 4fr 4fr 5fr 5fr;
+    justify-content: center;
+    align-items: center;
+}
+
+section.claim form .input-g {
+    position: relative;
+}
+
+section.claim form .input-g input {
+    display: block;
+    width: 16rem;
+    height: 2.5rem;
+    outline: none;
+    border: 2px solid #0b2faf;
+    border-radius: 0.4rem;
+    padding: 0 1rem;
+}
+
+section.claim form .input-g label {
+    display: block;
+    width: 3.7rem;
+    background-color: white;
+    position: absolute;
+    font-size: 0.8rem;
+    top: -0.7rem;
+    left: 0.5rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    text-align: center;
+}
+
+section.claim form .note {
+    width: 16rem;
+    height: 5rem;
+    background-color: rgba(173, 255, 0, 0.34);
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+}
+
+section.claim form .note p {
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    font-size: 0.6rem;
+    margin: 0;
+}
+
+section.claim button.claim {
+    width: 13rem;
+    display: block;
+    border: none;
+    background-color: yellow;
+    padding: 0.6rem 0.9rem 0.6rem 0.9rem;
+    border-radius: 2rem;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 0.8rem;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.418);
+    margin-bottom: 1rem;
+    margin-top: 0.6rem;
+    justify-self: center;
+}
+
+/* footer */
+footer {
+    display: grid;
+    grid-template-rows: 3fr 9fr 2fr;
+    background-color: #0b2faf;
+    padding: 2rem 2rem;
+    background-image: url("img/elips.svg");
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    background-position: -4rem -4rem;
+}
+
+footer .foot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .foot h1 {
+    color: white;
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+footer .foot hr {
+    margin: 0;
+    width: 55%;
+    height: 0.3rem;
+    opacity: 1;
+    color: yellow;
+}
+
+footer .faq {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2rem repeat(3, auto);
+    grid-auto-rows: 3.4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 99;
+}
+
+footer .faq h2 {
+    text-align: center;
+    color: white;
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    font-size: 1rem;
+}
+
+footer .faq .acord1,
+footer .faq .acord2,
+footer .faq .acord3 {
+    width: 100%;
+    height: 3.4rem;
+    background-color: yellow;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    align-self: start;
+    transition: 0.5s ease-in-out;
+}
+
+footer .faq .acord1 .upper,
+footer .faq .acord2 .upper,
+footer .faq .acord3 .upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 3.4rem;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+}
+
+footer .faq .acord1 .upper h3,
+footer .faq .acord2 .upper h3,
+footer .faq .acord3 .upper h3 {
+    font-family: "Mayeka Bold Demo", sans-serif;
+    font-size: 0.7rem;
+    margin: auto;
+}
+
+footer .faq .acord1 .upper .down,
+footer .faq .acord2 .upper .down,
+footer .faq .acord3 .upper .down {
+    width: 2.5rem;
+    height: 100%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    box-shadow: -2px 0 7px rgba(0, 0, 0, 0.507);
+}
+
+footer .faq .acord1 .downer,
+footer .faq .acord2 .downer,
+footer .faq .acord3 .downer {
+    height: 100%;
+    width: 100%;
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    font-size: 0.7rem;
+    padding: 0.8rem;
+}
+
+footer .faq .acord1 .downer p,
+footer .faq .acord2 .downer p,
+footer .faq .acord3 .downer p {
+    margin: 0;
+}
+
+footer .copy hr {
+    color: white;
+}
+
+footer .copy p {
+    color: white;
+    font-family: "Mayeka Demi Bold Demo", sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+}
