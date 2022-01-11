@@ -48,3 +48,35 @@ claim.addEventListener("click", () => {
 inf.addEventListener("click", () => {
     window.scroll(0, info.top);
 });
+
+const close = document.querySelectorAll(".close");
+const splash = document.querySelector(".exe .exe1");
+const subs = document.querySelector(".exe .exe2");
+const sales = document.querySelector(".exe .exe3");
+
+close.forEach((e) => {
+    e.addEventListener("click", () => {
+        document.querySelector(".overlay").style.display = "none";
+    });
+});
+
+splash.addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "flex";
+    document.querySelector(".overlay .subscription").style.display = "none";
+    document.querySelector(".overlay .sales").style.display = "none";
+    document.querySelector(".overlay .splash").style.display = "block";
+});
+
+subs.addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "flex";
+    document.querySelector(".overlay .splash").style.display = "none";
+    document.querySelector(".overlay .sales").style.display = "none";
+    document.querySelector(".overlay .subscription").style.display = "block";
+});
+
+sales.addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "flex";
+    document.querySelector(".overlay .subscription").style.display = "none";
+    document.querySelector(".overlay .splash").style.display = "none";
+    document.querySelector(".overlay .sales").style.display = "block";
+});
