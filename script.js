@@ -88,13 +88,13 @@ document.querySelector("div.popUpClaim .closeBox").onclick = () => {
 const nama = document.querySelector("section.claim form .input-g input[name='nama']").value;
 const email = document.querySelector("section.claim form .input-g input[name='nama']").value;
 
-document.querySelector("section.claim form button").onclick = () => {
-    if (
-        nama !== "" &&
-        email !== ""
-    ) {
-        let text = `Halo kak, nama saya ${nama} dengan email ${email} dan saya tertarik untuk membuat landing page di AOS, apakah masih tersedia?`;
+// document.querySelector("section.claim form button").onclick = () => {
+//     if (
+//         nama !== "" &&
+//         email !== ""
+//     ) {
+//         let text = `Halo kak, nama saya ${nama} dengan email ${email} dan saya tertarik untuk membuat landing page di AOS, apakah masih tersedia?`;
         
-        return (location.href = `https://api.whatsapp.com/send?phone=+6288802791094&text=${encodeURIComponent(text)}`);
-    }
-};
+//         return (location.href = `https://api.whatsapp.com/send?phone=+6288802791094&text=${encodeURIComponent(text)}`);
+//     }
+// };
