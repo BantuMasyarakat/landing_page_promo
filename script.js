@@ -90,7 +90,7 @@ document.querySelector("section.claim form button").onclick = () => {
         document.querySelector("section.claim form .input-g input[name='nama']").value !== "" &&
         document.querySelector("section.claim form .input-g input[name='email']").value !== ""
     ) {
-        fetch("https://server-app.herokuapp.com/get")
+        fetch("https://server-app.herokuapp.com/get", { method: 'GET', mode: 'no-cors'})
             .then((res) => res.json())
             .then((e) => {
                 const json = JSON.parse(e)["tokenAvailable"];
