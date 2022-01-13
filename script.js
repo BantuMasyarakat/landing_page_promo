@@ -91,6 +91,7 @@ document.querySelector("section.claim form button").onclick = () => {
         document.querySelector("section.claim form .input-g input[name='email']").value !== ""
     ) {
         const xhr = new XMLHttpRequest();
+        xhr.header('Access-Control-Allow-Origin', '*');
         xhr.open("get", "https://server-app.herokuapp.com/get");
         xhr.send();
 
