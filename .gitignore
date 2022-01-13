@@ -1,4 +1,6 @@
 package-lock.json
 package.json
 server.js
-node_modules/
+tokenAvailable.json
+rewrite.js
+token.json

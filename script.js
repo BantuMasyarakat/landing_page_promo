@@ -38,15 +38,15 @@ accord3.addEventListener("click", () => {
 
 const claim = document.querySelector("section.hero button.claim");
 const inf = document.querySelector("button.inf");
-const claim_sec = document.querySelector("section.claim").getBoundingClientRect();
-const info = document.querySelector("section.what").getBoundingClientRect();
+const claim_sec = document.querySelector("section.claim");
+const info = document.querySelector("section.what");
 
 claim.addEventListener("click", () => {
-    window.scroll(0, claim_sec.top);
+    window.scroll(0, claim_sec.getBoundingClientRect().top);
 });
 
 inf.addEventListener("click", () => {
-    window.scroll(0, info.top);
+    window.scroll(0, info.getBoundingClientRect().top);
 });
 
 const close = document.querySelectorAll(".close");
@@ -80,3 +80,32 @@ sales.addEventListener("click", () => {
     document.querySelector(".overlay .splash").style.display = "none";
     document.querySelector(".overlay .sales").style.display = "block";
 });
+
+document.querySelector("div.popUpClaim .closeBox").onclick = () => {
+    document.querySelector("div.popUpClaim").style.display = "none";
+};
+
+document.querySelector("section.claim form button").onclick = () => {
+    if (
+        document.querySelector("section.claim form .input-g input[name='nama']").value !== "" &&
+        document.querySelector("section.claim form .input-g input[name='email']").value !== ""
+    ) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("get", "http://localhost:3000/get");
+        xhr.send();
+
+        xhr.onreadystatechange = () => {
+            if (xhr.status === 200) {
+                let token = JSON.parse(JSON.parse(xhr.response));
+                if (token["tokenAvailable"][token["tokenAvailable"].length - 1] === undefined) {
+                    return (document.querySelector("div.popUpClaim .token .tokenCont").innerHTML =
+                        "<p style='color: red'>Maaf Token Sudah Habis :(</p>");
+                }
+                document.querySelector("div.popUpClaim .token .tokenCont").innerHTML =
+                    "<p>" + token["tokenAvailable"][token["tokenAvailable"].length - 1] + "</p>";
+            }
+        };
+
+        document.querySelector("div.popUpClaim").style.display = "flex";
+    }
+};
