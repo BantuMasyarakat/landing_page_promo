@@ -90,18 +90,23 @@ document.querySelector("section.claim form button").onclick = () => {
         document.querySelector("section.claim form .input-g input[name='nama']").value !== "" &&
         document.querySelector("section.claim form .input-g input[name='email']").value !== ""
     ) {
-        fetch("https://server-app.herokuapp.com/get")
-            .then((res) => res.json())
-            .then((e) => {
-                const json = JSON.parse(e)["tokenAvailable"];
+        let text = `Halo kak, nama saya ${document.querySelector("section.claim form .input-g input[name='nama']").value} dengan email ${
+            document.querySelector("section.claim form .input-g input[name='email']").value
+        } dan saya tertarik untuk membuat landing page di AOS, apakah masih tersedia?`;
 
-                if (json[json.length - 1] === undefined) {
-                    return (document.querySelector("div.popUpClaim .token .tokenCont").innerHTML =
-                        "<p style='color: red'>Maaf Token Sudah Habis :(</p>");
-                }
-                document.querySelector("div.popUpClaim .token .tokenCont").innerHTML = "<p>" + json[json.length - 1] + "</p>";
-            });
+        return (location.href = `https://api.whatsapp.com/send?phone=+6288802791094&text=${encodeURIComponent(text)}`);
+        // fetch("https://server-app.herokuapp.com/get")
+        //     .then((res) => res.json())
+        //     .then((e) => {
+        //         const json = JSON.parse(e)["tokenAvailable"];
 
-        document.querySelector("div.popUpClaim").style.display = "flex";
+        //         if (json[json.length - 1] === undefined) {
+        //             return (document.querySelector("div.popUpClaim .token .tokenCont").innerHTML =
+        //                 "<p style='color: red'>Maaf Token Sudah Habis :(</p>");
+        //         }
+        //         document.querySelector("div.popUpClaim .token .tokenCont").innerHTML = "<p>" + json[json.length - 1] + "</p>";
+        //     });
+
+        // document.querySelector("div.popUpClaim").style.display = "flex";
     }
 };
