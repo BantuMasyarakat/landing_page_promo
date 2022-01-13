@@ -90,23 +90,9 @@ document.querySelector("section.claim form button").onclick = () => {
         document.querySelector("section.claim form .input-g input[name='nama']").value !== "" &&
         document.querySelector("section.claim form .input-g input[name='email']").value !== ""
     ) {
-        const text = `Halo kak, nama saya *${document.querySelector("section.claim form .input-g input[name='nama']").value}* dengan email *${document.querySelector("section.claim form .input-g input[name='email']").value}* dan saya tertarik 
+        let text = `Halo kak, nama saya ${document.querySelector("section.claim form .input-g input[name='nama']").value} dengan email ${document.querySelector("section.claim form .input-g input[name='email']").value} dan saya tertarik 
         untuk membuat landing page di AOS, apakah masih tersedia?`;
         
-        return Location.href = "https://wa.me/+6288802791094?text="+encodeURIComponent(text);
-//         fetch("https://server-app.herokuapp.com/get", { method: 'GET', mode: 'no-cors'})
-//             .then((res) => res.json())
-//             .then((e) => {
-//                 const json = JSON.parse(e)["tokenAvailable"];
-
-//                 if (json[json.length - 1] === undefined) {
-//                     return (document.querySelector("div.popUpClaim .token .tokenCont").innerHTML =
-//                         "<p style='color: red'>Maaf Token Sudah Habis :(</p>");
-//                 }
-//                 document.querySelector("div.popUpClaim .token .tokenCont").innerHTML = "<p>" + json[json.length - 1] + "</p>";
-//             console.log(e);
-//             });
-
-//         document.querySelector("div.popUpClaim").style.display = "flex";
+        return Location.href = "https://wa.me/+6288802791094?text=" + encodeURIComponent(text);
     }
 };
