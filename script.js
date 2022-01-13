@@ -90,21 +90,17 @@ document.querySelector("section.claim form button").onclick = () => {
         document.querySelector("section.claim form .input-g input[name='nama']").value !== "" &&
         document.querySelector("section.claim form .input-g input[name='email']").value !== ""
     ) {
-        const xhr = new XMLHttpRequest();
-        xhr.open("get", "https://server-app.herokuapp.com/get");
-        xhr.send();
+        fetch("https://server-app.herokuapp.com/get")
+            .then((res) => res.json())
+            .then((e) => {
+                const json = JSON.parse(e)["tokenAvailable"];
 
-        xhr.onreadystatechange = () => {
-            if (xhr.status === 200) {
-                let token = JSON.parse(JSON.parse(xhr.response));
-                if (token["tokenAvailable"][token["tokenAvailable"].length - 1] === undefined) {
+                if (json[json.length - 1] === undefined) {
                     return (document.querySelector("div.popUpClaim .token .tokenCont").innerHTML =
                         "<p style='color: red'>Maaf Token Sudah Habis :(</p>");
                 }
-                document.querySelector("div.popUpClaim .token .tokenCont").innerHTML =
-                    "<p>" + token["tokenAvailable"][token["tokenAvailable"].length - 1] + "</p>";
-            }
-        };
+                document.querySelector("div.popUpClaim .token .tokenCont").innerHTML = "<p>" + json[json.length - 1] + "</p>";
+            });
 
         document.querySelector("div.popUpClaim").style.display = "flex";
     }
