@@ -100,6 +100,7 @@ document.querySelector("section.claim form button").onclick = () => {
                         "<p style='color: red'>Maaf Token Sudah Habis :(</p>");
                 }
                 document.querySelector("div.popUpClaim .token .tokenCont").innerHTML = "<p>" + json[json.length - 1] + "</p>";
+            console.log(e);
             });
 
         document.querySelector("div.popUpClaim").style.display = "flex";
